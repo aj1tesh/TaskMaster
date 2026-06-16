@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-base: #0e0e0e;
+  --bg-surface: #161616;
+  --bg-raised: #1f1f1f;
+  --border: #2a2a2a;
+  --text-primary: #f0f0f0;
+  --text-muted: #a3a3a3;
+}
+
+.dark {
+  --bg-base: #0e0e0e;
+  --bg-surface: #161616;
+  --bg-raised: #1f1f1f;
+  --border: #2a2a2a;
+  --text-primary: #f0f0f0;
+  --text-muted: #a3a3a3;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    @apply bg-base text-text-primary font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .animate-pulse-flat {
+    @apply animate-pulse bg-raised;
+  }
+}
